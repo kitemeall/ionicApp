@@ -1,1 +1,41 @@
-/* Empty. Add your own CSS if you like */
+.deleteitem{
+	z-index: 10;
+	color: rgb(209,35,35);
+}
+
+.list .item-checkbox{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.list .item-checkbox .title{
+	padding: 16px 0;
+	display: block;
+}
+
+.item-checkbox .checkbox{
+	right: auto;
+}
+
+.item.checked .title{
+	color:gray;
+	text-decoration: line-through;
+}
+
+.animated.ng-leave{
+	z-index: 100;
+	-webkit-animation-name: hinge;
+	animation-name: hinge;
+}
+
+.animated.ng-enter{
+	z-index: 100;
+	-webkit-animation-name: bounceInLeft;
+	animation-name: bounceInLeft;
+}
+
+
+
+
+
+

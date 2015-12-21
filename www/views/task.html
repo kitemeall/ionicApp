@@ -1,0 +1,29 @@
+<div class="modal">
+  <ion-header-bar class="bar-positive">
+        <h1 class="title " ng-show="!creatingNewTask">Изменить задачу</h1>
+        <h1 class="title " ng-show="creatingNewTask">Новая задача</h1>
+          <button class="button button-clear" ng-click="closeTask()">Закрыть</button>  
+</ion-header-bar>
+      <ion-content>
+        <form ng-submit="saveTask(activeTask)">
+          <div class="list">
+            <label class="item item-input">
+              <input type="text" placeholder="Что запланировать" ng-model="activeTask.title">
+            </label>
+             <label class="item item-input">
+              <textarea placeholder="Описание" ng-model="activeTask.description"></textarea>
+            </label>
+            <ion-toggle ng-model="activeTask.done" toggle-class="toggle" ng-show="!creatingNewTask">Выполнено</ion-toggle>
+
+            <div class="padding">
+              <button type="submit" class="button button-block button-positive" ng-show="creatingNewTask">
+                Добавить
+              </button>
+               <button type="submit" class="button button-block button-positive" ng-show="!creatingNewTask">
+                Сохранить
+              </button>
+            </div>
+          </div>
+        </form>
+      </ion-content>
+</div>
